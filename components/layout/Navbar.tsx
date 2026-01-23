@@ -10,93 +10,107 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-navy-900/95 backdrop-blur-md border-b border-slate-800 shadow-2xl transition-all">
-      <div className="container mx-auto px-6 h-28 flex items-center justify-between">
+    // DEĞİŞİKLİK 1: Arka plan beyaz yapıldı (bg-white/90) ve border rengi açıldı.
+    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-slate-100 shadow-sm transition-all">
+      <div className="container mx-auto px-6 h-24 flex items-center justify-between">
         {/* LOGO ALANI */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-white p-2 rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-300">
-            <Image
-              src="/logo-3d.png"
-              alt="4B TMGDK Logo"
-              width={220} // Logo biraz daha büyütüldü
-              height={90}
-              className="object-contain h-14 w-auto" // Yükseklik artırıldı
-              priority
-            />
-          </div>
+          {/* DEĞİŞİKLİK 2: Beyaz kutuyu kaldırdık. Logo artık doğrudan zeminde duruyor. */}
+          <Image
+            src="/logo-3d.png"
+            alt="4B TMGDK Logo"
+            width={240}
+            height={100}
+            // Logoyu biraz daha büyüttük ve parlaklığını doğal bıraktık
+            className="object-contain h-20 w-auto group-hover:scale-105 transition-transform duration-300"
+            priority
+          />
         </Link>
 
-        {/* Desktop Links (BÜYÜTÜLDÜ VE GÜZELLEŞTİRİLDİ) */}
-        <div className="hidden md:flex items-center gap-10 text-base font-bold text-slate-200">
+        {/* Desktop Links */}
+        {/* DEĞİŞİKLİK 3: Yazı renkleri koyulaştırıldı (text-slate-600) */}
+        <div className="hidden md:flex items-center gap-10 text-base font-bold text-slate-600">
           <Link
             href="/hizmetler"
-            className="hover:text-teal-400 transition-colors duration-300 hover:-translate-y-0.5"
+            className="hover:text-teal-600 transition-colors duration-300 hover:-translate-y-0.5"
           >
             Hizmetler
           </Link>
           <Link
             href="/egitimler"
-            className="hover:text-teal-400 transition-colors duration-300 hover:-translate-y-0.5"
+            className="hover:text-teal-600 transition-colors duration-300 hover:-translate-y-0.5"
           >
             Eğitimler
           </Link>
           <Link
             href="/referanslar"
-            className="hover:text-teal-400 transition-colors duration-300 hover:-translate-y-0.5"
+            className="hover:text-teal-600 transition-colors duration-300 hover:-translate-y-0.5"
           >
             Referanslar
           </Link>
           <Link
             href="/iletisim"
-            className="hover:text-teal-400 transition-colors duration-300 hover:-translate-y-0.5"
+            className="hover:text-teal-600 transition-colors duration-300 hover:-translate-y-0.5"
           >
             İletişim
           </Link>
+          <Link
+            href="/sss"
+            className="hover:text-teal-600 transition-colors duration-300 hover:-translate-y-0.5"
+          >
+            S.S.S.
+          </Link>
         </div>
 
-        {/* CTA Button (DAHA BÜYÜK VE DİKKAT ÇEKİCİ) */}
+        {/* CTA Button */}
         <div className="hidden md:flex items-center gap-4">
           <ContactModal
             triggerText="Hızlı Teklif Al"
-            className="h-12 px-8 text-base bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_30px_rgba(249,115,22,0.6)] transition-all hover:scale-105 active:scale-95"
+            className="h-12 px-8 text-base bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full shadow-lg shadow-orange-100 hover:shadow-orange-200 transition-all hover:scale-105 active:scale-95"
           />
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white p-2"
+          className="md:hidden text-slate-800 p-2 hover:bg-slate-100 rounded-lg transition-colors"
         >
           <Menu className="w-8 h-8" />
         </button>
       </div>
 
-      {/* Mobil Menü İçeriği */}
+      {/* Mobil Menü İçeriği - Beyaz Tema */}
       {isOpen && (
-        <div className="md:hidden bg-navy-900 border-t border-slate-800 p-6 absolute w-full left-0 top-28 flex flex-col gap-6 shadow-2xl">
+        <div className="md:hidden bg-white border-t border-slate-100 p-6 absolute w-full left-0 top-24 flex flex-col gap-6 shadow-xl">
           <Link
             href="/hizmetler"
-            className="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2"
+            className="text-lg font-bold text-slate-700 border-b border-slate-100 pb-3"
           >
             Hizmetler
           </Link>
           <Link
             href="/egitimler"
-            className="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2"
+            className="text-lg font-bold text-slate-700 border-b border-slate-100 pb-3"
           >
             Eğitimler
           </Link>
           <Link
             href="/referanslar"
-            className="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2"
+            className="text-lg font-bold text-slate-700 border-b border-slate-100 pb-3"
           >
             Referanslar
           </Link>
           <Link
             href="/iletisim"
-            className="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2"
+            className="text-lg font-bold text-slate-700 border-b border-slate-100 pb-3"
           >
             İletişim
+          </Link>
+          <Link
+            href="/sss"
+            className="text-lg font-bold text-slate-700 border-b border-slate-100 pb-3"
+          >
+            Sıkça Sorulan Sorular
           </Link>
           <ContactModal
             triggerText="Hızlı Teklif Al"

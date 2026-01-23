@@ -31,13 +31,15 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-            Gaziantep Sanayisinin <br />
-            <span className="text-teal-400">Güvenli Çözüm Ortağı</span>
+            VII. Bölge Müdürlüğü Sahasında <br />
+            <span className="text-teal-400">Mevzuata Tam Uyum</span>
           </h1>
 
-          <p className="text-lg text-slate-300 max-w-lg leading-relaxed">
-            Başpınar, Nizip ve tüm OSB bölgelerinde ADR/RID/IMDG süreçlerinizi
-            profesyonelce yönetiyoruz. Cezai riskleri sıfırlayın.
+          <p className="text-lg text-slate-300 max-w-2xl leading-relaxed mt-4">
+            Gaziantep merkezli olmak üzere; Kahramanmaraş, Adıyaman, Kilis,
+            Osmaniye ve Şanlıurfa illerini kapsayan geniş hizmet ağımızla,
+            ADR/RID/IMDG süreçlerinizi yönetiyor, cezai risklerinizi ortadan
+            kaldırıyoruz.
           </p>
 
           {/* Gerekli Importlar: 
