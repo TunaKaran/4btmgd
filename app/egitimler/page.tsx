@@ -7,7 +7,6 @@ import {
   BookOpen,
   Users,
   ShieldAlert,
-  CheckCircle2,
   Award,
   Download,
 } from "lucide-react";
@@ -26,6 +25,13 @@ export default function EgitimPage() {
       desc: "Personelin yaptığı işe (paketleme, yükleme, şoför vb.) özel olarak, mevzuattaki sorumluluklarını kapsayan teknik eğitim.",
       duration: "4 Saat",
       target: "Operasyonel Personel",
+    },
+    // YENİ EKLENEN EĞİTİM:
+    {
+      title: "Patlamadan Korunma (PKD) Eğitimi",
+      desc: "Çalışanların patlayıcı ortamların tehlikelerinden korunması, ATEX direktifleri, Zone hesaplamaları ve güvenlik tedbirleri üzerine teknik eğitim.",
+      duration: "4 Saat",
+      target: "Mühendisler ve İSG Ekipleri",
     },
     {
       title: "Emniyet ve Güvenlik Eğitimi",
@@ -100,7 +106,7 @@ export default function EgitimPage() {
               </li>
             </ul>
           </div>
-          <div className="relative h-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+          <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
             {/* Buraya ana eğitim fotoğrafı gelecek - egitim-1.jpg kullanıldı */}
             <Image
               src="/egitim-1.jpeg"
@@ -209,13 +215,6 @@ export default function EgitimPage() {
               triggerText="Eğitim Talep Et"
               className="bg-orange-600 hover:bg-orange-700 text-white font-bold h-14 px-8 text-lg shadow-lg shadow-orange-900/20"
             />
-            <Button
-              variant="outline"
-              className="h-14 px-8 border-slate-600 text-white hover:bg-white/10 bg-transparent"
-            >
-              <Download className="mr-2 w-4 h-4" />
-              Eğitim Sunumu İndir
-            </Button>
           </div>
         </div>
       </section>

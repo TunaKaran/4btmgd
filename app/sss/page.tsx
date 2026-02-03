@@ -14,7 +14,7 @@ export default function SSSPage() {
     {
       question: "Hangi işletmeler TMGD bulundurmak zorundadır?",
       answer:
-        "Yıllık 50 ton ve üzeri tehlikeli madde (akaryakıt, asit, boya, tıbbi atık vb.) ile iştigal eden (gönderen, paketleyen, yükleyen, dolduran, boşaltan, alan) tüm işletmeler TMGD hizmeti almak zorundadır. Ayrıca miktar ne olursa olsun, patlayıcı (Sınıf 1), radyoaktif (Sınıf 7) ve bulaşıcı (Sınıf 6.2) maddelerle çalışanlar için de zorunluluktur.",
+        "Yıllık 20 ton ve üzeri tehlikeli madde (akaryakıt, asit, boya, tıbbi atık vb.) ile iştigal eden (gönderen, paketleyen, yükleyen, dolduran, boşaltan, alan) tüm işletmeler TMGD hizmeti almak zorundadır. Ayrıca miktar ne olursa olsun, patlayıcı (Sınıf 1), radyoaktif (Sınıf 7) ve bulaşıcı (Sınıf 6.2) maddelerle çalışanlar için de zorunluluktur.",
     },
     {
       question: "TMGD hizmeti almazsam cezası nedir?",
@@ -57,9 +57,7 @@ export default function SSSPage() {
     <main className="min-h-screen bg-slate-50">
       <Navbar />
 
-      {/* HERO SECTION */}
       <section className="bg-navy-900 pt-32 pb-20 text-center px-4 relative overflow-hidden">
-        {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-teal-500 via-transparent to-transparent"></div>
 
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">
@@ -71,7 +69,6 @@ export default function SSSPage() {
         </p>
       </section>
 
-      {/* FAQ CONTENT */}
       <section className="container mx-auto px-4 py-16 max-w-4xl -mt-10 relative z-20">
         <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 p-6 md:p-10">
           <Accordion type="single" collapsible className="w-full space-y-4">
@@ -91,7 +88,6 @@ export default function SSSPage() {
             ))}
           </Accordion>
 
-          {/* EXTRA HELP BOX */}
           <div className="mt-12 bg-orange-50 rounded-xl p-8 border border-orange-100 text-center">
             <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <HelpCircle className="w-6 h-6" />
@@ -113,7 +109,5 @@ export default function SSSPage() {
 
       <Footer />
     </main>
-  );  
-
-  
+  );
 }

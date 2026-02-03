@@ -13,7 +13,7 @@ export default function SSSPage() {
   const faqs = [
     {
       question: "Hangi işletmeler TMGD bulundurmak zorundadır?",
-      answer: "Yıllık 50 ton ve üzeri tehlikeli madde (akaryakıt, asit, boya, tıbbi atık vb.) ile iştigal eden (gönderen, paketleyen, yükleyen, dolduran, boşaltan, alan) tüm işletmeler TMGD hizmeti almak zorundadır. Ayrıca miktar ne olursa olsun, patlayıcı (Sınıf 1), radyoaktif (Sınıf 7) ve bulaşıcı (Sınıf 6.2) maddelerle çalışanlar için de zorunluluktur."
+      answer: "Yıllık 20 ton ve üzeri tehlikeli madde (akaryakıt, asit, boya, tıbbi atık vb.) ile iştigal eden (gönderen, paketleyen, yükleyen, dolduran, boşaltan, alan) tüm işletmeler TMGD hizmeti almak zorundadır. Ayrıca miktar ne olursa olsun, patlayıcı (Sınıf 1), radyoaktif (Sınıf 7) ve bulaşıcı (Sınıf 6.2) maddelerle çalışanlar için de zorunluluktur."
     },
     {
       question: "TMGD hizmeti almazsam cezası nedir?",

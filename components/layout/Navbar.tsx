@@ -10,26 +10,33 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    // DEĞİŞİKLİK 1: Arka plan beyaz yapıldı (bg-white/90) ve border rengi açıldı.
     <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-slate-100 shadow-sm transition-all">
-      <div className="container mx-auto px-6 h-24 flex items-center justify-between">
+      {/* GÜNCELLEME 1: Konteyner Yüksekliği
+         Mobilde h-20 (80px), Masaüstünde h-24 (96px) yapıldı. 
+         Eski h-28 değeri 720p ekranlarda çok büyüktü.
+      */}
+      <div className="container mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
         {/* LOGO ALANI */}
         <Link href="/" className="flex items-center gap-2 group">
-          {/* DEĞİŞİKLİK 2: Beyaz kutuyu kaldırdık. Logo artık doğrudan zeminde duruyor. */}
           <Image
             src="/logo-3d.png"
             alt="4B TMGDK Logo"
             width={240}
             height={100}
-            // Logoyu biraz daha büyüttük ve parlaklığını doğal bıraktık
-            className="object-contain h-20 w-auto group-hover:scale-105 transition-transform duration-300"
+            // GÜNCELLEME 2: Logo Boyutu
+            // h-24 navbar içine h-20 logo sığmaz.
+            // Logo mobilde h-12, masaüstünde h-16 (64px) yapıldı.
+            className="object-contain h-12 md:h-16 w-auto group-hover:scale-105 transition-transform duration-300"
             priority
           />
         </Link>
 
         {/* Desktop Links */}
-        {/* DEĞİŞİKLİK 3: Yazı renkleri koyulaştırıldı (text-slate-600) */}
-        <div className="hidden md:flex items-center gap-10 text-base font-bold text-slate-600">
+        {/* GÜNCELLEME 3: Menü Aralığı (Gap)
+           gap-10 yerine gap-8 yapıldı. 1366px genişlikteki ekranlarda 
+           menünün sağa taşmasını veya alt satıra inmesini engeller.
+        */}
+        <div className="hidden md:flex items-center gap-8 text-base font-bold text-slate-600">
           <Link
             href="/hizmetler"
             className="hover:text-teal-600 transition-colors duration-300 hover:-translate-y-0.5"
@@ -66,7 +73,9 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <ContactModal
             triggerText="Hızlı Teklif Al"
-            className="h-12 px-8 text-base bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full shadow-lg shadow-orange-100 hover:shadow-orange-200 transition-all hover:scale-105 active:scale-95"
+            // GÜNCELLEME 4: Buton Yüksekliği
+            // Navbar küçüldüğü için butonu da h-12'den h-11'e çektik (Daha orantılı durur).
+            className="h-11 px-6 text-sm bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full shadow-lg shadow-orange-100 hover:shadow-orange-200 transition-all hover:scale-105 active:scale-95"
           />
         </div>
 
@@ -79,9 +88,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobil Menü İçeriği - Beyaz Tema */}
+      {/* Mobil Menü İçeriği */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 p-6 absolute w-full left-0 top-24 flex flex-col gap-6 shadow-xl">
+        <div className="md:hidden bg-white border-t border-slate-100 p-6 absolute w-full left-0 top-20 flex flex-col gap-6 shadow-xl">
           <Link
             href="/hizmetler"
             className="text-lg font-bold text-slate-700 border-b border-slate-100 pb-3"
