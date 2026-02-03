@@ -15,7 +15,7 @@ export default function Navbar() {
          Mobilde h-20 (80px), Masaüstünde h-24 (96px) yapıldı. 
          Eski h-28 değeri 720p ekranlarda çok büyüktü.
       */}
-      <div className="container mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
+      <div className="container mx-auto px-6 h-20 md:h-15 flex items-center justify-between">
         {/* LOGO ALANI */}
         <Link href="/" className="flex items-center gap-2 group">
           <Image
